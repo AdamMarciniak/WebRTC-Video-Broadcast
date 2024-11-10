@@ -98,8 +98,6 @@ function getStream() {
     audio: { deviceId: audioSource ? { exact: audioSource } : undefined },
     video: {
       deviceId: videoSource ? { exact: videoSource } : undefined,
-      width: { exact: 320 },
-      height: { exact: 240 },
     },
   };
   return navigator.mediaDevices
