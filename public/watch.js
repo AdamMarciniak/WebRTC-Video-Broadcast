@@ -13,7 +13,7 @@ const config = {
   ],
 };
 
-const socket = io.connect("https://courtdates/webrtc/");
+const socket = io.connect("https://courtdates/webrtc");
 const video = document.querySelector("video");
 const enableAudioButton = document.querySelector("#enable-audio");
 
