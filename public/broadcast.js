@@ -13,7 +13,7 @@ const config = {
   ],
 };
 
-const socket = io.connect("https://courtdates/webrtc");
+const socket = io.connect("https://courtdates.ca/webrtc");
 
 socket.on("answer", (id, description) => {
   peerConnections[id].setRemoteDescription(description);
