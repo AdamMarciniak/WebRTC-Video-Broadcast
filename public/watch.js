@@ -1,6 +1,6 @@
 let peerConnection;
 const config = {
-  // iceTransportPolicy: "relay",
+  iceTransportPolicy: "relay",
   iceServers: [
     {
       urls: "stun:stun.l.google.com:19302",
