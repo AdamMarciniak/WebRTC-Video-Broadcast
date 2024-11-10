@@ -33,10 +33,10 @@ socket.on("offer", (id, description) => {
   };
   peerConnection.onicecandidate = (event) => {
     if (event.candidate) {
-      // if (event.candidate.candidate.indexOf("relay") < 0) {
-      //   // if no relay address is found, assuming it means no TURN server
-      //   return;
-      // }
+      if (event.candidate.candidate.indexOf("relay") < 0) {
+        // if no relay address is found, assuming it means no TURN server
+        return;
+      }
       socket.emit("candidate", id, event.candidate);
     }
   };
