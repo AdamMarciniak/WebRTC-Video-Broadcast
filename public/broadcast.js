@@ -20,6 +20,7 @@ socket.on("answer", (id, description) => {
 });
 
 socket.on("watcher", (id) => {
+  console.log(`Watcher ${id} Connected`);
   const peerConnection = new RTCPeerConnection(config);
   peerConnections[id] = peerConnection;
 
