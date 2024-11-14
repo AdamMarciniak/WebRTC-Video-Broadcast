@@ -5,11 +5,11 @@ const config = {
     {
       urls: "stun:stun.l.google.com:19302",
     },
-    {
-      urls: "turn:144.217.162.53:3478",
-      username: "username1",
-      credential: "key1",
-    },
+    // {
+    //   urls: "turn:144.217.162.53:3478",
+    //   username: "username1",
+    //   credential: "key1",
+    // },
   ],
 };
 
@@ -29,10 +29,10 @@ socket.on("watcher", (id) => {
 
   peerConnection.onicecandidate = (event) => {
     if (event.candidate) {
-      if (event.candidate.candidate.indexOf("relay") < 0) {
-        // if no relay address is found, assuming it means no TURN server
-        return;
-      }
+      // if (event.candidate.candidate.indexOf("relay") < 0) {
+      //   // if no relay address is found, assuming it means no TURN server
+      //   return;
+      // }
       socket.emit("candidate", id, event.candidate);
     }
   };
